@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+const storedData = localStorage.getItem("items");
+const parsedData = JSON.parse(storedData);
 const itemSlice = createSlice({
   name: "item",
-  initialState: { items: [] , obj : {} },
+  initialState: { items: parsedData },
   reducers: {
     addItemToCart(state, action) {
       const newItem = action.payload;
@@ -13,18 +14,9 @@ const itemSlice = createSlice({
           img: newItem.img,
           name: newItem.name,
           price: newItem.price,
-          totalPrice: newItem.price * 1, // set totalPrice as price * quantity (1)
+          totalPrice: newItem.price * 1,
           quantity: 1,
         });
-        state.obj={
-          id: newItem.id,
-          img: newItem.img,
-          name: newItem.name,
-          price: newItem.price,
-          totalPrice: newItem.price * 1, // set totalPrice as price * quantity (1)
-          quantity: 1,
-        }
-        // console.log(state.obj);
       } else {
         existingItem.quantity++;
         existingItem.totalPrice = existingItem.price * existingItem.quantity; // update totalPrice

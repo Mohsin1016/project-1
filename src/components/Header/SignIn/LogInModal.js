@@ -37,14 +37,14 @@ const LoginModal = () => {
           user.Email === storedUser.Email &&
           user.Password === storedUser.Password
         ) {
-          console.log("Logged in");
+          // console.log("Logged in");
           loggedIn = true;
         }
       });
       if (loggedIn) {
         dispatch(displayAction.displaySignIn());
       } else {
-        console.log("not logged in");
+        // console.log("not logged in");
       }
     }
 
@@ -57,7 +57,7 @@ const LoginModal = () => {
     const storedUsers = localStorage.getItem("users");
     if (storedUsers) {
       const parsedUsers = JSON.parse(storedUsers);
-      console.log(parsedUsers);
+      // console.log(parsedUsers);
     }
   };
 

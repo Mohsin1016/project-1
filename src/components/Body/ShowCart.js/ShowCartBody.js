@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector } from "react-redux";
 import { itemAction } from "../../Store/itemSlice";
 import ShowCartOrder from "./ShowCartOrder";
 
@@ -8,15 +8,14 @@ const ShowCartBody = () => {
 
   const addHandler = (item) => {
     dispatch(itemAction.addItemToCart(item));
+    console.log(item);
   };
 
   const removeHandler = (id) => {
     dispatch(itemAction.removeItemFromCart(id));
+    console.log(id);
   };
-
-  const storedObj = localStorage.getItem("mainArray");
-    if (storedObj) {
-    var  parsedObj = JSON.parse(storedObj);};
+  var items = useSelector((state) => state.item.items);
     
   return (
     <div className="row my-5 mx-2">
@@ -31,7 +30,7 @@ const ShowCartBody = () => {
             </tr>
           </thead>
           <tbody>
-            {parsedObj.map((item) => (
+            {items.map((item) => (
               <tr key={item.id}>
                 <th scope="row">
                   <img src={item.img} alt={item.name} width="60" height="80" />{" "}
