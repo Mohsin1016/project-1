@@ -6,6 +6,7 @@ const RowOne = () => {
   const dispatch = useDispatch();
 
   const addToCart = (item) => {
+    console.log(item);
     dispatch(itemAction.addItemToCart(item));
   };
 

@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 const storedData = localStorage.getItem("items");
-const parsedData = JSON.parse(storedData);
+const parsedData = storedData ? JSON.parse(storedData) : [];
 const itemSlice = createSlice({
   name: "item",
   initialState: { items: parsedData },
   reducers: {
     addItemToCart(state, action) {
       const newItem = action.payload;
+      console.log(newItem);
+      console.log(state);
       const existingItem = state.items.find((item) => item.id === newItem.id);
       if (!existingItem) {
         state.items.push({
