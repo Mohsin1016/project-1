@@ -57,7 +57,7 @@ const LoginModal = () => {
     const storedUsers = localStorage.getItem("users");
     if (storedUsers) {
       const parsedUsers = JSON.parse(storedUsers);
-      // console.log(parsedUsers);
+      console.log(parsedUsers);
     }
   };
 
