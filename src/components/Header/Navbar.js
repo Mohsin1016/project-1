@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-transparent text-dark">
         <div className="container-fluid">
-          <span className="navbar-brand text-info fs-1 flip-animation">COZA STORE </span>
+          <span className="navbar-brand fs-1 flip-animation">COZA STORE </span>
           <button
             className="navbar-toggler"
             type="button"

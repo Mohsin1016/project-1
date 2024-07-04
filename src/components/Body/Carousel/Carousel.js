@@ -36,9 +36,10 @@ const Carousel = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="./images/1.jpg"
-              className="d-block w-100"
+              src="https://images.pexels.com/photos/1267697/pexels-photo-1267697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="d-block w-100 img-fluid "
               alt="..."
+              style={{ height: "500px", objectFit: "cover" }}
             />
             <div className="carousel-caption d-none d-md-block">
               <h5>Women</h5>
@@ -46,9 +47,10 @@ const Carousel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="./images/2.jpg"
-              className="d-block w-100"
+              src="https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="d-block w-100 img-fluid"
               alt="..."
+              style={{ height: "500px", objectFit: "cover" }}
             />
             <div className="carousel-caption d-none d-md-block">
               <h5>Men</h5>
@@ -56,9 +58,10 @@ const Carousel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="./images/3.jpg"
-              className="d-block w-100"
+              src="https://images.pexels.com/photos/1460838/pexels-photo-1460838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="d-block w-100 img-fluid"
               alt="..."
+              style={{ height: "500px", objectFit: "cover" }}
             />
             <div className="carousel-caption d-none d-md-block">
               <h5>Accessories</h5>
