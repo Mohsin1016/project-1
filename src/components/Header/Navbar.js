@@ -1,7 +1,7 @@
 import React from "react";
 import Cart from "./Cart";
-import LoginModal from "./SignIn/LogInModal";
-import SignUpModal from "./SignIn/SignUpModal";
+import LoginModal from "../SignIn/LogInModal";
+import SignUpModal from "../SignIn/SignUpModal";
 import Profile from "./userProfile";
 import { useSelector } from "react-redux";
 

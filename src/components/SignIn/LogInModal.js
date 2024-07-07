@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { displayAction } from "../../Store/DisplayCart";
+import { displayAction } from "../Store/DisplayCart";
 
 const LoginModal = () => {
   const dispatch = useDispatch();

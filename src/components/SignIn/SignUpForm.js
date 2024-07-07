@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { displayAction } from "../../Store/DisplayCart";
+import { displayAction } from "../Store/DisplayCart";
 const SignUpForm = (props) => {
   const dispatch = useDispatch();
   const [firstName, setFirstName] = useState("");
