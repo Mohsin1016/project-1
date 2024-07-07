@@ -1,20 +1,18 @@
 import React from "react";
-import Cart from "./Cart/Cart";
+import Cart from "./Cart";
 import LoginModal from "./SignIn/LogInModal";
 import SignUpModal from "./SignIn/SignUpModal";
 import Profile from "./userProfile";
 import { useSelector } from "react-redux";
-import './Navbar.css';
-import "./prf.css";
 
 const Navbar = () => {
  const signIn = useSelector(state => state.display.showSignIn ); 
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-transparent text-dark">
+      <nav className="navbar navbar-expand-lg bg-transparent text-dark p-0">
         <div className="container-fluid">
-          <span className="navbar-brand fs-1 flip-animation">COZA STORE </span>
+          <span className="navbar-brand fs-1 p-0">COZA STORE</span>
           <button
             className="navbar-toggler"
             type="button"
@@ -78,7 +76,7 @@ const Navbar = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#profileModal"
                 >
-                  <img src="./images/b1.jpg" alt="" className="prf" />
+                  <img src="./images/b1.jpg" alt="" />
                 </a>
               </li>
             </ul>
